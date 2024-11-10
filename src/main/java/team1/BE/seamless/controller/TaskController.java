@@ -47,7 +47,7 @@ public class TaskController {
     @Operation(summary = "프로젝트 아이디로 태스크 리스트 조회")
     @GetMapping("/{projectId}/task")
     public PageResult<TaskWithOwnerDetail> getTaskList(@PathVariable("projectId") Long projectId,
-        @RequestParam(value = "status", required = false) Integer status,
+        @RequestParam(value = "status", required = false) String status,
         @RequestParam(value = "priority", required = false) String priority,
         @RequestParam(value = "owner", required = false) String ownerName,
         @Valid TaskDTO.getList param) {

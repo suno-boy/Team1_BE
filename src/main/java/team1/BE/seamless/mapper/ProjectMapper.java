@@ -49,8 +49,10 @@ public class ProjectMapper {
             projectEntity.getImageURL(),
             projectEntity.getStartDate(),
             projectEntity.getEndDate(),
-            projectEntity.getProjectOptions().stream().map(ProjectOption::getOptionEntity).map(OptionEntity::getId).toList(),
-            projectEntity.getMemberEntities().size(),
+            projectEntity.getProjectOptions().stream()
+                .map(ProjectOption::getOptionEntity).map(OptionEntity::getId).toList(),
+            projectEntity.getMemberEntities().stream()
+                .filter(entity -> !entity.getIsDelete()).toList().size(),
             toManager(projectEntity.getUserEntity())
         );
     }

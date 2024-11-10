@@ -56,7 +56,7 @@ public class TaskService {
         return taskMapper.toDetail(taskEntity);
     }
 
-    public Page<TaskWithOwnerDetail> getTaskList(Long projectId, Integer status, String priority,
+    public Page<TaskWithOwnerDetail> getTaskList(Long projectId, String status, String priority,
         String ownerName, getList param) {
 //        ProjectEntity project = projectRepository.findByIdAndIsDeletedFalse(projectId)
 //            .orElseThrow(() -> new BaseHandler(HttpStatus.NOT_FOUND, "존재하지 않는 프로젝트"));

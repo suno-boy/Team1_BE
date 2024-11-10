@@ -18,6 +18,7 @@ public class PageParam {
     }
 
     public Integer getPage() {
+        size = size < 1 ? Integer.MAX_VALUE : size;
         return page;
     }
 

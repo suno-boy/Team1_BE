@@ -34,7 +34,7 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
         nativeQuery = true)
     Page<TaskEntity> findByProjectIdAndOptionalFilters(
         @Param("projectId") Long projectId,
-        @Param("status") Integer status,
+        @Param("status") String status,
         @Param("priority") String priority,
         @Param("memberId") Long memberId,
         Pageable pageable

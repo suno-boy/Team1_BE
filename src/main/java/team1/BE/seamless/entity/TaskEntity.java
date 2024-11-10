@@ -30,7 +30,7 @@ public class TaskEntity {
         this.name = name;
         this.description = description;
         this.progress = progress;
-        this.status = Status.PENDING;
+        this.status = status;
         this.priority = priority;
         this.isDeleted = false;
         this.projectEntity = project;

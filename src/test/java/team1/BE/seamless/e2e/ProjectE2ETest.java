@@ -26,7 +26,7 @@ import team1.BE.seamless.DTO.ProjectDTO.ProjectUpdate;
 import team1.BE.seamless.service.ProjectService;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class ProjectServiceTest {
+class ProjectE2ETest {
     @LocalServerPort
     private int port;
     private String url = "http://localhost:";
@@ -35,7 +35,7 @@ class ProjectServiceTest {
     private HttpHeaders headers = new HttpHeaders();
     private final ProjectService projectService;
     @Autowired
-    public ProjectServiceTest(TestRestTemplate restTemplate, ProjectService projectService) {
+    public ProjectE2ETest(TestRestTemplate restTemplate, ProjectService projectService) {
         this.restTemplate = restTemplate;
         this.projectService = projectService;
     }
